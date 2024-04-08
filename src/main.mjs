@@ -31,15 +31,6 @@ import knex from 'knex';
     // Example insert
     await db("users").insert({ name: "John Doe", email: "john@example.com" });
 
-    // Example query
-    const users = await db("users").select("*");
-    console.log("Users:", users);
-
-    // Example update
-    await db("users").where("id", 1).update({ email: "newemail@example.com" });
-
-    // Example delete
-    await db("users").where("id", 1).del();
 
     // Close the database connection
     await db.destroy();
